@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body, html{
+    height: 100vh;
+    width: 100vw;
+}
+
+a {
+    text-decoration: none;
+    color: #369FFF;
+}
+
+i {
+    font-size: 24px;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.container .left-section {
+    z-index: 2;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 25px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+}
+
+.container .left-section .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .left-section .logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.container .left-section .logo a {
+    font-weight: 800;
+    font-size: 20px;
+    color: #006ED3;
+}
+
+.menu-btn {
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #D1E6F9;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-btn i {
+    font-size: 18px;
+    color: #208BEE;
+}
+
+.container .left-section .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.container .left-section .sidebar .item {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.container .left-section .sidebar i {
+    color: #BDBDBD;
+    transition: all 0.3s ease;
+}
+
+.container .left-section .sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 20px;
+    color: #BDBDBD;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.container .left-section .sidebar .item#active a,
+.container .left-section .sidebar .item#active i {
+    color: #369FFF;
+}
+
+.container .left-section .sidebar .item a::after {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    background-color: #369FFF;
+    right: -30px;
+    border-radius: 50%;
+    top: 0;
+    transform: translateY(116%);
+    transition: all 0.3s ease;
+}
+
+.container .left-section .sidebar .item#active a::after {
+    width: 8px;
+    height: 8px;
+}
+
+.container .left-section .pic img {
+    width: 160px;
+}
+
+main {
+    z-index: 1;
+    position: relative;
+    padding: 40px 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main header {
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+main header h5 {
+    font-size: 16px;
+    color: #369FFF;
+    font-weight: 400;
+    /*flex-grow: 1; 
+    margin: 0;
+    text-align: center;*/
+}
+
+.home{
+    text-align: center;
+}
+
+.home h1{
+    color: #369FFF;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+main .form-container {
+    position: absolute;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+main .form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+main .form-container form label {
+    color: #006ED3;
+    font-weight: 500;
+}
+
+.form-container form input {
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    background-color: #dfdfdf80;
+    height: 35px;
+    width: 450px;
+    margin-bottom: 20px;
+}
+
+.form-container form input[type = "submit"] {
+    background-color: #006ED3;
+    color: white;
+    border-radius: 9999px;
+    cursor: pointer;
+}
+
+.form-container #matriculas table{
+    margin: 500px;
+}
+
+#cadastrar_cliente,
+#agenda,
+#matriculas,
+#avaliacoes {
+    display: none;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #006ED3; /* Cor do cabeçalho */
+    color: #ffffff; /* Cor do texto do cabeçalho */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-weight: 500; /* Peso da fonte para as células */
+}
+
+tbody tr:hover {
+    background-color: #D1E6F9; /* Cor ao passar o mouse sobre a linha */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Cor de fundo para linhas pares */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Cor de fundo para linhas ímpares */
+}
+
+@media screen and (max-width: 1200px) {
+
+    .container .left-section,
+    .container main {
+        padding: 20px 20px 0 20px;
+        border: none;
+    }
+
+    .container .left-section .logo a,
+    .container .left-section .sidebar a,
+    .container .left-section .pic img {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container .left-section {
+        position: fixed;
+        height: 60vh;
+        background-color: #fff;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        top: -60vh;
+    }
+
+    .container .left-section .logo {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container .left-section .logo .menu-btn,
+    main header .menu-btn {
+        display: flex;
+    }
+
+    main h5 {
+        font-size: 16px;
+    }
+
+    main .separator .info {
+        gap: 15px;
+    }
+
+    main .separator .info h3 {
+        font-size: 20px;
+    }
+
+    main .analytics .item {
+        min-width: 160px;
+    }
+
+    main .analytics .item i {
+        display: none;
+    }
+
+    main .planning {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    main .planning .item {
+        padding: 8px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        grid-template-columns: 1fr;
+        padding-top: 10px;
+    }
+
+    .container main .form-container form input{
+        width: 300px;
+    }
+
+}

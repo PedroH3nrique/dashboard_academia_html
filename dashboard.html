@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard | StrongMan</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="left-section">
+            <div class="logo">
+                <button class="menu-btn" id="menu-close">
+                    <i class='bx bx-log-out-circle'></i>
+                </button>
+                <a href="dashboard.html">STRONGMAN</a>
+            </div>
+
+            <div class="sidebar">
+                <div class="item active " id="cd_clt">
+                    <i class='bx bx-user-plus'></i>
+                    <a href="#" id="cd_clt">Cadastrar</a>
+                </div>
+                <div class="item" id="mtr">
+                    <i class='bx bx-user-check'></i>
+                    <a href="#" id="mtr">Matrículas</a>
+                </div>
+                <div class="item" id="agd">
+                    <i class='bx bxs-calendar'></i>
+                    <a href="#" id="agd">Agenda</a>
+                </div>
+                <div class="item" id="avl">
+                    <i class='bx bx-body'></i>
+                    <a href="#" id="avl">Avaliação</a>
+                </div>
+            </div>
+
+            <div class="pic">
+                <img src="imagens/STRONGMAN.png">
+            </div>
+
+        </aside>
+
+        <main>
+            <header>
+                <button class="menu-btn" id="menu-open">
+                    <i class='bx bx-menu'></i>
+                </button>
+                <!--<h5>Olá <b>PROFESSOR</b>, bem vindo de volta!</h5>-->
+            </header>
+
+            <div class="home" id="home">
+                <h1>Bem vindo de volta PROFESSOR!!!</h1>
+            </div>
+
+            <div class="form-container">
+
+                <!--Form para cadastrar novo cliente-->
+                <form action="" method="post" id="cadastrar_cliente">
+
+                    <div>
+                        <label for="rg">RG:</label>
+                        <input type="number" name="rg" id="rg" min="0" required>
+                    </div>
+
+                    <div>
+                        <label for="cpf">CPF:</label>
+                        <input type="number" name="cpf" id="cpf" min="0" required>
+                    </div>
+
+                    <div>
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" name="nome" id="nome" required>
+                    </div>
+
+                    <div>
+                        <label for="data">Data do início do treino:</label>
+                        <input type="date" name="data" id="data" required>
+                    </div>
+
+                    <div>
+                        <label for="nome_eme">Nome de emergência:</label>
+                        <small>Não é obrigatório</small>
+                        <input type="text" name="nome_eme" id="nome_eme">
+                    </div>
+
+                    <div>
+                        <label for="relacao">Relação com o cliente:</label>
+                        <small>Não é obrigatório</small>
+                        <input type="text" name="relacao" id="relacao">
+                    </div>
+
+                    <div>
+                        <label for="telefone">Número de telefone:</label>
+                        <small>Não é obrigatório</small>
+                        <input type="tel" name="telefone" id="telefone">
+                    </div>
+
+                    <div>
+                        <label for="forma_pag">Forma de pagamento:</label>
+                        <input type="text" name="forma_pag" id="forma_pag" required>
+                    </div>
+
+                    <div>
+                        <label for="tipo_plano">Tipo do plano:</label>
+                        <small>Exemplo: mensal</small>
+                        <input type="text" name="tipo_plano" id="tipo_plano" required>
+                    </div>
+
+                    <div>
+                        <label for="preco_plano">Preço do plano:</label>
+                        <input type="number" name="preco_plano" id="preco_plano" min="0" required>
+                    </div>
+
+
+                    <input type="submit" value="Enviar" name="submit">
+
+                </form>
+
+
+                <!--Aqui será mostrado a tabela com os clientes-->
+                <div id="matriculas">
+
+                    <table class="table" border="1"> 
+                        <thead>
+                            <tr>
+                                <th scope="col">RG</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Telefone de emergência</th>
+                                <th scope="col">Tipo do plano</th>
+                                <th scope="col">Preço do plano</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>658423658</td>
+                                <td>Jairo</td>
+                                <td>(11) 91234-5678</td>
+                                <td>Mensal</td>
+                                <td>157</td>
+                            </tr>
+                            <tr>
+                                <td>123456789</td>
+                                <td>Ana Paula</td>
+                                <td>(11) 98765-4321</td>
+                                <td>Trimestral</td>
+                                <td>420</td>
+                            </tr>
+                            <tr>
+                                <td>987654321</td>
+                                <td>Roberto Silva</td>
+                                <td>(21) 99876-5432</td>
+                                <td>Anual</td>
+                                <td>1500</td>
+                            </tr>
+                            <tr>
+                                <td>456789123</td>
+                                <td>Fernanda Costa</td>
+                                <td>(31) 99888-7766</td>
+                                <td>Mensal</td>
+                                <td>180</td>
+                            </tr>
+                            <tr>
+                                <td>321654987</td>
+                                <td>Lucas Almeida</td>
+                                <td>(41) 99999-8888</td>
+                                <td>Semestral</td>
+                                <td>800</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+
+                </div>
+
+                <!--Form para adicionar um evento a agenda-->
+                <form action="" method="post" id="agenda">
+
+                    <div>
+                        <label for="nome_agen">Digite o nome do cliente:</label>
+                        <input type="text" name="nome_agen" id="nome_agen" required>
+                    </div>
+
+                    <div>
+                        <label for="data_agen">Data do treino:</label>
+                        <input type="date" name="data_agen" id="data_agen" required>
+                    </div>
+
+                    <div>
+                        <label for="motivo_agen">Motivo do agendamento:</label>
+                        <small>Não é obrigatório</small>
+                        <input type="text" name="motivo_agen" id="motivo_agen">
+                    </div>
+
+                    <input type="submit" value="Enviar" name="submit_agen">
+
+                    <table class="table" border="1"> 
+                        <thead>
+                            <tr>
+                                <th scope="col">Cliente</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Motivo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pedro</td>
+                                <td>13/10/2024</td>
+                                <td>Treino de costas</td>
+                            </tr>
+                            <tr>
+                                <td>Ana Julia</td>
+                                <td>14/10/2024</td>
+                                <td>Treino de pernas</td>
+                            </tr>
+                            <tr>
+                                <td>Roberto</td>
+                                <td>15/10/2024</td>
+                                <td>Aula de pilates</td>
+                            </tr>
+                            <tr>
+                                <td>Fernanda</td>
+                                <td>16/10/2024</td>
+                                <td>Treino de cardio</td>
+                            </tr>
+                            <tr>
+                                <td>Lucas</td>
+                                <td>17/10/2024</td>
+                                <td>Treino de peito</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+
+                </form>
+
+                <!--Aqui será feito o formulário das avaliações-->
+                <form action="" method="post" id="avaliacoes">
+
+                    <p>Digite o valor dos campos abaixo:</p>
+
+                    <div>
+                        <label for="peso_avaliacao">Peso:</label>
+                        <input type="number" name="peso_avaliacao" id="peso_avaliacao" required>
+                    </div>
+
+                    <div>
+                        <label for="peito_avaliacao">Peitoral:</label>
+                        <input type="number" name="peito_avaliacao" id="peito_avaliacao" required>
+                    </div>
+
+                    <div>
+                        <label for="braco_esq_avaliacao">Braço esquerdo:</label>
+                        <input type="number" name="braco_esq_avaliacao" id="braco_esq_avaliacao" required>
+                    </div>
+
+                    <div>
+                        <label for="braco_dir_avaliacao">Braço direito:</label>
+                        <input type="number" name="braco_dir_avaliacao" id="braco_dir_avaliacao" required>
+                    </div>
+
+                    <div>
+                        <label for="cintura_avaliacao">Cintura:</label>
+                        <input type="number" name="cintura_avaliacao" id="cintura_avaliacao" required>
+                    </div>
+
+                    <div>
+                        <label for="abdomen_avaliacao">Abdômen:</label>
+                        <input type="number" name="abdomen_avaliacao" id="abdomen_avaliacao" required>
+                    </div>
+
+                    <div>
+                        <label for="quadril_avaliacao">Quadril:</label>
+                        <input type="number" name="quadril_avaliacao" id="quadril_avaliacao" required>
+                    </div>
+
+                    <div>
+                        <label for="coxa_esq_avaliacao">Coxa esquerda:</label>
+                        <input type="number" name="coxa_esq_avaliacao" id="coxa_esq_avaliacao" required>
+                    </div>
+
+                    <div>
+                        <label for="coxa_dir_avaliacao">Coxa direita:</label>
+                        <input type="number" name="coxa_dir_avaliacao" id="coxa_dir_avaliacao" required>
+                    </div>
+
+                    <div>
+                        <label for="panturrilha_esq_avaliacao">Panturrilha esquerda:</label>
+                        <input type="number" name="panturrilha_esq_avaliacao" id="panturrilha_esq_avaliacao" required>
+                    </div>
+
+                    <div>
+                        <label for="panturrilha_dir_avaliacao">Panturrilha direita:</label>
+                        <input type="number" name="panturrilha_dir_avaliacao" id="panturrilha_dir_avaliacao" required>
+                    </div>
+
+                    <div>
+                        <label for="objetivo_avaliacao">Digite o objetivo do cliente:</label>
+                        <small>Exemplo: Perder peso</small>
+                        <input type="text" name="objetivo_avaliacao" id="objetivo_avaliacao" required>
+                    </div>
+
+                    <div>
+                        <label for="data_avaliacao">Data da avaliação:</label>
+                        <small>Avaliação de hoje</small>
+                        <input type="date" name="data_avaliacao" id="data_avaliacao" required>
+                    </div>
+
+
+                    <input type="submit" value="Enviar" name="submit_avaliacao">
+
+                </form>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
