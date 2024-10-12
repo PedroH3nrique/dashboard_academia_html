@@ -227,7 +227,7 @@ main .form-container form label {
 }
 
 .form-container table {
-    width: 60%;
+    width: 75%;
     border-collapse: collapse;
     margin: auto;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
