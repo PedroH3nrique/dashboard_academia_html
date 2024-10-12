@@ -23,13 +23,15 @@ i {
 
 .container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
+    width: 100%;
     overflow-y: auto;
 }
 
 .container .left-section {
     background-color: white;
-    z-index: 2;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -37,7 +39,9 @@ i {
     justify-content: space-between;
     padding: 40px 35px;
     height: 100vh;
+    width: 15%;
     position: fixed;
+    z-index: 2;
     top: 0;
     left: 0;
     overflow-y: hidden;
@@ -133,9 +137,9 @@ i {
 }
 
 main {
-    position: relative;
-    padding: 40px 20px;
-    width: 100%;
+    margin-left: 15%;
+    padding: 40px 0;
+    width: 85%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -172,9 +176,6 @@ main header h5 {
 }
 
 main .form-container {
-    position: absolute;
-    width: 100%;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -184,6 +185,8 @@ main .form-container {
 main .form-container form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-container form div{
@@ -238,7 +241,7 @@ main .form-container form label {
 
 .form-container table th, td {
     padding: 12px;
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #ddd;
     font-weight: 500; /* Peso da fonte para as células */
 }
@@ -251,11 +254,9 @@ main .form-container form label {
     background-color: #ffffff; /* Cor de fundo para linhas ímpares */
 }
 
-@media screen and (max-width: 1732px) {
+@media screen and (max-width: 1505px) {
 
-    #progressos table{
-        padding: 0;
-    }
+    /**/
     
 }
 
@@ -288,6 +289,10 @@ main .form-container form label {
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
         top: -60vh;
+    }
+
+    main{
+        margin-left: 0;
     }
 
     .container .left-section .logo {
