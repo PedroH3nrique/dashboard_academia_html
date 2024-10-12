@@ -256,7 +256,18 @@ main .form-container form label {
 
 @media screen and (max-width: 1505px) {
 
-    /**/
+    .form-container{
+        overflow-x: auto;
+    }
+
+    .form-container table{
+        font-size: 11px;
+    }
+
+    .form-container table th, td{
+        padding: 12px;
+        white-space: nowrap;
+    }
     
 }
 
