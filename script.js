@@ -134,3 +134,8 @@ function searchProgress() {
         }
     }
 }
+
+/* função para imprimir a tabela dos progressos*/
+function imprimirTabela() {
+    window.print();
+}
