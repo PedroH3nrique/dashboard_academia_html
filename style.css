@@ -228,6 +228,17 @@ main .form-container form label {
     display: none;
 }
 
+#matriculas #searchInputClient,
+#progressos #searchInputProgress{
+    position: absolute;
+    top: 25%;
+    margin: auto;
+    padding: 10px 50px 10px 20px;
+    border: 1px solid #D32F2F;
+    border-radius: 5px;
+    outline: none;
+}
+
 .form-container table {
     width: fit-content;
     border-collapse: collapse;
