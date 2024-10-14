@@ -75,7 +75,7 @@ i {
     align-items: center;
     justify-content: center;
     border: none;
-    background-color: #D1E6F9;
+    background-color: /*#D1E6F9*/#ffd2cf;
     border-radius: 6px;
     cursor: pointer;
     display: none;
@@ -138,7 +138,7 @@ i {
 
 main {
     margin-left: 15%;
-    padding: 40px 0;
+    padding: 55px 0;
     width: 85%;
     height: 100%;
     display: flex;
@@ -150,7 +150,10 @@ main {
 main header {
     display: flex;
     align-items: center;
-    /*justify-content: space-between;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 20px;
     gap: 15px;
     margin-bottom: 30px;
     width: 100%;
@@ -175,6 +178,7 @@ main header h5 {
 
 main .form-container {
     display: flex;
+    padding-top: 30px;
     align-items: center;
     justify-content: center;
     margin: auto;
@@ -367,6 +371,10 @@ main .form-container form label {
 
     .form-container table th, td{
         padding: 5px;
+    }
+
+    .home img{
+        width: 350px;
     }
     
 }

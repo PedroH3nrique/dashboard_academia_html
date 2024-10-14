@@ -78,10 +78,12 @@ pgr.onclick = function(){
 
 menuOpen.addEventListener('click', () => {
     sideBar.style.top = '0';
+    menuOpen.style.display = 'none';
 });
 
 menuClose.addEventListener('click', () => {
     sideBar.style.top = '-60vh';
+    menuOpen.style.display = 'block';
 });
 
 let activeItem = sidebarItems[0];
